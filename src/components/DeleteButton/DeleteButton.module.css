@@ -1,0 +1,10 @@
+.delButton {
+    display: inline-flex;
+    padding: 4px 12px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: coral;
+    margin-left: auto;
+    
+}
