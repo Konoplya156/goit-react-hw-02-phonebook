@@ -28,23 +28,6 @@ export class App extends Component {
     actions.resetForm();
   };
 
-  formSubmitHandler = data => {
-    const { contacts } = this.state;
-
-    for (let i = 0; i < contacts.length; i++) {
-      if (contacts[i].number === data.number) {
-        alert(
-          `${data.number} is already in your contacts with name:  ${contacts[i].name}`
-        );
-        return;
-      }
-    }
-
-    this.setState(prevState => ({
-      contacts: [...prevState.contacts, data],
-    }));
-  };
-
   changeFilter = evt => {
     this.setState({ filter: evt.currentTarget.value });
   };
@@ -57,7 +40,7 @@ export class App extends Component {
     );
   };
 
-  delContact = evt => {
+  deleteContact = evt => {
     const { contacts } = this.state;
     for (let i = 0; i < contacts.length; i++) {
       if (contacts[i].id === evt.currentTarget.id) {
